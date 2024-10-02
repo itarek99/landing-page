@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 /* Reset CSS */
+:root {
+  --bg-color: #d4f0d4;
+  --btn-color: #3468c0;
+  --text-color: #141515;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -31,6 +37,8 @@ p,
 a {
   line-height: 1.5;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Remove quotes from blockquotes */
@@ -71,15 +79,20 @@ a {
   margin: 0 auto;
 }
 
-.flex {
-  display: flex;
+.default-btn {
+  display: inline-block;
+  background-color: var(--btn-color);
+  color: #fff;
+  padding: 10px 36px;
+  border-radius: 100px;
 }
 
 .header {
-  background-color: #d4f0d4;
+  background-color: var(--bg-color);
 }
 
 .header__container {
+  display: flex;
   align-items: center;
   gap: 2rem;
   padding-block: 10px;
@@ -91,6 +104,7 @@ a {
 }
 
 .nav__container {
+  display: flex;
   justify-content: space-between;
 }
 
@@ -99,6 +113,7 @@ a {
 }
 
 .nav__wrapper {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
@@ -106,11 +121,13 @@ a {
 }
 
 .nav__top {
+  display: flex;
   align-items: center;
   gap: 30px;
 }
 
 .nav__list {
+  display: flex;
   gap: 3rem;
 }
 
@@ -129,6 +146,7 @@ a {
 }
 
 .hero__container {
+  display: flex;
   position: relative;
   z-index: 10;
   height: 100%;
@@ -140,4 +158,65 @@ a {
   font-size: 100px;
   background-color: #fff;
   border-radius: 1rem 0 0 1rem;
+}
+
+.feature {
+  position: absolute;
+  top: -85px;
+  left: 0;
+  right: 0;
+  height: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature__card {
+  width: 178px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 0 16px 0 16px;
+}
+
+.feature__card__image__container {
+  height: 40px;
+  width: 40px;
+  display: flex;
+}
+
+.feature__img {
+  width: 37px;
+}
+
+.feature__title {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 8px;
+  line-height: 22px;
+}
+
+.cta {
+  position: relative;
+  height: 470px;
+  background-color: var(--bg-color);
+}
+
+.cta__title {
+  font-size: 45px;
+  font-weight: 200;
+  color: var(--text-color);
+  padding-top: 160px;
+}
+
+.cta__content {
+  margin-top: 12px;
+}
+
+.cta__text {
+  font-weight: 300;
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+.cta__btn {
+  margin-top: 36px;
 }
